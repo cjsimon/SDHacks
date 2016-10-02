@@ -1,4 +1,9 @@
 ﻿#pragma strict
+@script RequireComponent(AudioSource)
+@script RequireComponent(AudioEchoFilter)
+//echo documentation 
+//https://docs.unity3d.com/ScriptReference/AudioEchoFilter-decayRatio.html
+
 
 function Start () {
 
@@ -12,6 +17,9 @@ function Start () {
 	for (var device in Microphone.devices){
 			Debug.Log("Name: " + device);
 	}
+
+//echo 
+	GetComponent.<AudioEchoFilter>().decayRatio = 0.4;
 
 //for raw data stuff
 
